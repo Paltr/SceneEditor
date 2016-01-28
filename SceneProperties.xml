@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <arg type="STRING" name="Stack name" default="stack" />
+  <arg type="FLOAT" name="Scale" default="0.0015625" />
+  <arg type="INT" name="Indents amount" default="2" />
+  <arg type="FLOAT" name="Delta Y" />
+</root>

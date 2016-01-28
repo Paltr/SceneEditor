@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{ED845842-2143-47AE-B872-D87507182D70}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SceneEditor</RootNamespace>
+    <AssemblyName>SceneEditor</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\Bin\NET\Tools\SeaBoomSceneEditor\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\Bin\NET\Tools\SuperGunSceneEditor\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FileDlgExtenders, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Bin\NET\FileDlgExtenders.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenTK, Version=1.0.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL" />
+    <Reference Include="OpenTK.Compatibility, Version=1.0.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL" />
+    <Reference Include="OpenTK.GLControl, Version=1.0.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Export\ExportExtensions.cs" />
+    <Compile Include="Export\IPropertiesContainer.cs" />
+    <Compile Include="Export\IScene.cs" />
+    <Compile Include="Export\IScenesSet.cs" />
+    <Compile Include="Export\ISceneTranslator.cs" />
+    <Compile Include="Export\IShape.cs" />
+    <Compile Include="Export\IShapeCircle.cs" />
+    <Compile Include="Forms\Controls\ProjectExplorerControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\ProjectExplorerControl.Designer.cs">
+      <DependentUpon>ProjectExplorerControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\PropertiesContainerControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\PropertiesContainerControl.Designer.cs">
+      <DependentUpon>PropertiesContainerControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\Properties\BoolPropertyControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\Properties\BoolPropertyControl.Designer.cs">
+      <DependentUpon>BoolPropertyControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\Properties\ColorPropertyControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\Properties\ColorPropertyControl.Designer.cs">
+      <DependentUpon>ColorPropertyControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\Properties\CustomPropertyControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\Properties\CustomPropertyControl.Designer.cs">
+      <DependentUpon>CustomPropertyControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\Properties\PropertyControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\Properties\PropertyControl.Designer.cs">
+      <DependentUpon>PropertyControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\Properties\ShapeRefPropertyControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\Properties\ShapeRefPropertyControl.Designer.cs">
+      <DependentUpon>ShapeRefPropertyControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\SceneView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\SceneView.Designer.cs">
+      <DependentUpon>SceneView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\ShapeTemplateView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\ShapeTemplateView.Designer.cs">
+      <DependentUpon>ShapeTemplateView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\ShapesView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\ShapesView.Designer.cs">
+      <DependentUpon>ShapesView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\TemplatesExplorerControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\TemplatesExplorerControl.Designer.cs">
+      <DependentUpon>TemplatesExplorerControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditCircleTemplateDetailsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditCircleTemplateDetailsForm.Designer.cs">
+      <DependentUpon>EditCircleTemplateDetailsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditImageTemplateDetailsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditImageTemplateDetailsForm.Designer.cs">
+      <DependentUpon>EditImageTemplateDetailsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditRectTemplateDetailsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditRectTemplateDetailsForm.Designer.cs">
+      <DependentUpon>EditRectTemplateDetailsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditShapeTemplateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditShapeTemplateForm.Designer.cs">
+      <DependentUpon>EditShapeTemplateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Interfaces\IEditor.cs" />
+    <Compile Include="Forms\Interfaces\IStringValue.cs" />
+    <Compile Include="History.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\Controls\ProjectExplorerControl.resx">
+      <DependentUpon>ProjectExplorerControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\PropertiesContainerControl.resx">
+      <DependentUpon>PropertiesContainerControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\Properties\BoolPropertyControl.resx">
+      <DependentUpon>BoolPropertyControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\Properties\ColorPropertyControl.resx">
+      <DependentUpon>ColorPropertyControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\Properties\CustomPropertyControl.resx">
+      <DependentUpon>CustomPropertyControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\Properties\ShapeRefPropertyControl.resx">
+      <DependentUpon>ShapeRefPropertyControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\SceneView.resx">
+      <DependentUpon>SceneView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\ShapesView.resx">
+      <DependentUpon>ShapesView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\ShapeTemplateView.resx">
+      <DependentUpon>ShapeTemplateView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\TemplatesExplorerControl.resx">
+      <DependentUpon>TemplatesExplorerControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditCircleTemplateDetailsForm.resx">
+      <DependentUpon>EditCircleTemplateDetailsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditImageTemplateDetailsForm.resx">
+      <DependentUpon>EditImageTemplateDetailsForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditRectTemplateDetailsForm.resx">
+      <DependentUpon>EditRectTemplateDetailsForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditShapeTemplateForm.resx">
+      <DependentUpon>EditShapeTemplateForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Scene\PropertiesContainer.cs" />
+    <Compile Include="Scene\PropertiesContainer\Properties\BoolProperty.cs" />
+    <Compile Include="Scene\PropertiesContainer\Properties\ColorProperty.cs" />
+    <Compile Include="Scene\PropertiesContainer\Properties\FloatProperty.cs" />
+    <Compile Include="Scene\PropertiesContainer\Properties\IntProperty.cs" />
+    <Compile Include="Scene\PropertiesContainer\IProperty.cs" />
+    <Compile Include="Scene\PropertiesContainer\PropertiesBuilder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scene\PropertiesContainer\PropertiesBuilderCache.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scene\PropertiesContainer\Properties\ShapeRefProperty.cs" />
+    <Compile Include="Scene\PropertiesContainer\Properties\StringProperty.cs" />
+    <Compile Include="Scene\PropertiesContainer\Properties\Vector2Property.cs" />
+    <Compile Include="Scene\Scene.cs" />
+    <Compile Include="Scene\SceneConstants.cs" />
+    <Compile Include="Scene\SceneSerializer.cs" />
+    <Compile Include="Scene\ScenesSet.cs" />
+    <Compile Include="Scene\Shape.cs" />
+    <Compile Include="Scene\ShapeCircle.cs" />
+    <Compile Include="Scene\ShapeTemplates\CircleTemplate.cs" />
+    <Compile Include="Scene\SpatialManip.cs" />
+    <Compile Include="Scene\ShapeTemplate.cs" />
+    <Compile Include="Scene\ShapeTemplatesSet.cs" />
+    <Compile Include="Scene\ShapeTemplates\RectTemplate.cs" />
+    <Compile Include="Scene\ShapeTemplates\ImageTemplate.cs" />
+    <Compile Include="Scene\ISceneView.cs" />
+    <Compile Include="Scene\SpatialManips\PivotManip.cs" />
+    <Compile Include="Scene\SpatialManips\RefManip.cs" />
+    <Compile Include="Scene\TransformWrapper.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="Solution.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Reusable\NET\CustomControls\CustomControls.csproj">
+      <Project>{1DCEED87-1C53-43AE-950B-7E4429510F58}</Project>
+      <Name>CustomControls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Reusable\NET\GLRenderer\GLRenderer.csproj">
+      <Project>{9EF9A566-412B-447D-A3F1-9F28C422A373}</Project>
+      <Name>GLRenderer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Reusable\NET\Util\Util.csproj">
+      <Project>{1B1C1F57-C375-46CC-AEE4-4DC60107934D}</Project>
+      <Name>Util</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Anchor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Minus.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Plus.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Target.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Template.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Circle.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

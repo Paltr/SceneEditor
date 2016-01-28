@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SceneEditor", "SceneEditor.csproj", "{ED845842-2143-47AE-B872-D87507182D70}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1B1C1F57-C375-46CC-AEE4-4DC60107934D} = {1B1C1F57-C375-46CC-AEE4-4DC60107934D}
+		{1DCEED87-1C53-43AE-950B-7E4429510F58} = {1DCEED87-1C53-43AE-950B-7E4429510F58}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomControls", "..\..\Reusable\NET\CustomControls\CustomControls.csproj", "{1DCEED87-1C53-43AE-950B-7E4429510F58}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Util", "..\..\Reusable\NET\Util\Util.csproj", "{1B1C1F57-C375-46CC-AEE4-4DC60107934D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GLRenderer", "..\..\Reusable\NET\GLRenderer\GLRenderer.csproj", "{9EF9A566-412B-447D-A3F1-9F28C422A373}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ED845842-2143-47AE-B872-D87507182D70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED845842-2143-47AE-B872-D87507182D70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED845842-2143-47AE-B872-D87507182D70}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{ED845842-2143-47AE-B872-D87507182D70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED845842-2143-47AE-B872-D87507182D70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED845842-2143-47AE-B872-D87507182D70}.Release|x86.ActiveCfg = Release|Any CPU
+		{1DCEED87-1C53-43AE-950B-7E4429510F58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DCEED87-1C53-43AE-950B-7E4429510F58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DCEED87-1C53-43AE-950B-7E4429510F58}.Debug|x86.ActiveCfg = Debug|x86
+		{1DCEED87-1C53-43AE-950B-7E4429510F58}.Debug|x86.Build.0 = Debug|x86
+		{1DCEED87-1C53-43AE-950B-7E4429510F58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DCEED87-1C53-43AE-950B-7E4429510F58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DCEED87-1C53-43AE-950B-7E4429510F58}.Release|x86.ActiveCfg = Release|x86
+		{1DCEED87-1C53-43AE-950B-7E4429510F58}.Release|x86.Build.0 = Release|x86
+		{1B1C1F57-C375-46CC-AEE4-4DC60107934D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B1C1F57-C375-46CC-AEE4-4DC60107934D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B1C1F57-C375-46CC-AEE4-4DC60107934D}.Debug|x86.ActiveCfg = Debug|x86
+		{1B1C1F57-C375-46CC-AEE4-4DC60107934D}.Debug|x86.Build.0 = Debug|x86
+		{1B1C1F57-C375-46CC-AEE4-4DC60107934D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B1C1F57-C375-46CC-AEE4-4DC60107934D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B1C1F57-C375-46CC-AEE4-4DC60107934D}.Release|x86.ActiveCfg = Release|x86
+		{1B1C1F57-C375-46CC-AEE4-4DC60107934D}.Release|x86.Build.0 = Release|x86
+		{9EF9A566-412B-447D-A3F1-9F28C422A373}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EF9A566-412B-447D-A3F1-9F28C422A373}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EF9A566-412B-447D-A3F1-9F28C422A373}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9EF9A566-412B-447D-A3F1-9F28C422A373}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EF9A566-412B-447D-A3F1-9F28C422A373}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EF9A566-412B-447D-A3F1-9F28C422A373}.Release|x86.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
